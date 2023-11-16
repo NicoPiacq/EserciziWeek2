@@ -1,4 +1,4 @@
-package jaita.gryffindor.nicolapiacquaddio.exercise3;
+package jaita.gryffindor.exerciseweek2.exercise3;
 
 import java.util.Scanner;
 
