@@ -18,9 +18,8 @@ public class Exercise4 {
     }
 
     public static int[] getPrimeListUpTo(int n) {
-        int[] allNumbers = new int[n];
         int counter = 0;
-        int[] primeNumbers = null;
+        int[] primeNumbers;
         for(int i = 1; i <= n; i++) {
             if(isPrime(i)) {
                 counter++;
@@ -34,7 +33,6 @@ public class Exercise4 {
             if(isPrime(j)) {
                 primeNumbers[k] = j;
                 k++;
-                continue;
             }
         }
         return primeNumbers;
