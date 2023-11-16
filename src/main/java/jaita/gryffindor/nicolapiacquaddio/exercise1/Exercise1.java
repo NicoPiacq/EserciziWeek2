@@ -27,9 +27,7 @@ public class Exercise1 {
     public static int fattorialeIterativo(int n) {
         int ris = 1;
         for (int i = 0; i <= n; i++) {
-            if (i == 0) {
-                ris *= 1;
-            } else {
+            if (i != 0) {
                 ris *= i;
             }
         }
