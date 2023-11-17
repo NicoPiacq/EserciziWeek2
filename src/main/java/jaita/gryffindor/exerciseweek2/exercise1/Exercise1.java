@@ -12,9 +12,13 @@ public class Exercise1 {
     }
 
     public static int getUserInput() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Inserisci un numero da calcolarne il fattoriale: ");
-        return input.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int input = 0;
+        do {
+            System.out.print("Inserisci un numero maggiore o uguale di 0 da calcolarne il fattoriale: ");
+            input = scanner.nextInt();
+        } while(input < 0);
+        return input;
     }
 
     //cambiato tipo delle variabili int a long
@@ -27,10 +31,8 @@ public class Exercise1 {
 
     public static long fattorialeIterativo(int n) {
         long res = 1;
-        for (int i = 0; i <= n; i++) {
-            if (i != 0) {
-                res *= i;
-            }
+        for (int i = 1; i <= n; i++) {
+            res *= i;
         }
         return res;
     }
