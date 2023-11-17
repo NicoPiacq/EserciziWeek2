@@ -16,14 +16,14 @@ public class Exercise2 {
         return input.nextInt();
     }
 
-    public static int fibonacciIterativo(int n) {
+    public static void fibonacciIterativo(int n) {
         int ris = 0;
         int n1 = 0, n2 = 1;
 
-        System.out.print(0 + " ");
         if(n == 0) {
-            return ris;
+            return;
         }
+        System.out.print(0 + " ");
 
         for(int i = 0; i < n; i++) {
             if(i == 0) {
@@ -34,6 +34,5 @@ public class Exercise2 {
             n1 = n2;
             n2 = ris;
         }
-        return ris;
     }
 }

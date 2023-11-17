@@ -17,7 +17,13 @@ public class Exercise5 {
         int target = input.nextInt();
         input.close();
 
-        binarySearch(vector, target);
+        //utilizzando la verisone ricorsiva che ritona l' indice, quindi controllo il risultato
+        int res = binarySearch(vector, target, 0, vector.length);
+        if(res == -1){
+            System.out.println("Il numero cercato non è presente nell' arrray");
+        } else{
+            System.out.println("Il numero cercato è presente nell' array all' indice " + res);
+        }
 
     }
 
@@ -58,6 +64,24 @@ public class Exercise5 {
         }
 
         System.out.println("Numero di ricerche effettuate: "+tries);
+    }
+
+    //aggiunta versione ricorsiva (ritorna l' indice della posizione dell' elemento cercato,
+    // -1 se non esiste all' interno dell' array)
+    static public int binarySearch(int[] myArray, int numToFind, int left, int right){
+        if (right >= left) {
+            int mid = left + (right - left) / 2;
+            if(myArray[mid] == numToFind) {
+                return mid;
+            }
+            else if(numToFind < myArray[mid]){
+                return binarySearch(myArray, numToFind, left, mid - 1);
+            }
+            else {
+                return binarySearch(myArray, numToFind, mid + 1, right);
+            }
+        }
+        return -1;
     }
 
 }

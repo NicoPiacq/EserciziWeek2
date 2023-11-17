@@ -17,20 +17,21 @@ public class Exercise1 {
         return input.nextInt();
     }
 
-    public static int fattorialeRicorsivo(int n) {
+    //cambiato tipo delle variabili int a long
+    public static long fattorialeRicorsivo(int n) {
         if (n <= 1) {
             return 1;
         }
         return n * fattorialeRicorsivo(n-1);
     }
 
-    public static int fattorialeIterativo(int n) {
-        int ris = 1;
+    public static long fattorialeIterativo(int n) {
+        long res = 1;
         for (int i = 0; i <= n; i++) {
             if (i != 0) {
-                ris *= i;
+                res *= i;
             }
         }
-        return ris;
+        return res;
     }
 }

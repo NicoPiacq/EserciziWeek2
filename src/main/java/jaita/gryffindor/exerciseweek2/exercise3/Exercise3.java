@@ -17,10 +17,15 @@ public class Exercise3 {
         }
     }
 
+    //aggiunto controlli direttamente nell' acquisizione dell' input
     public static int getUserInput() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Inserisci un numero per capire se è primo o no: ");
-        return input.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int input;
+        do{
+        System.out.print("Inserisci un numero maggiore di 0 per capire se è primo o no: ");
+            input = scanner.nextInt();
+    } while(input <= 0);
+        return input;
     }
 
     // VERSIONE ITERATIVA

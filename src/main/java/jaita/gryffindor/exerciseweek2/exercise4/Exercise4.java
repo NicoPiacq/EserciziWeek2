@@ -13,9 +13,12 @@ public class Exercise4 {
 
     public static int getUserInput() {
         Scanner input = new Scanner(System.in);
-        System.out.print("Dimmi quanti numeri primi devono stampare entro: ");
+        System.out.print("Inserisci il numero limite massimo: "); //cambiato messaggio
         return input.nextInt();
     }
+
+    //suggerimento implementativo, creo un array di dimensione n tanto sarà sempre abbastanza grande
+    //per contenere tutti i numeri primi da 0 a n; in seguito poi copiamo l' array in un array di dimensioni corrette
 
     public static int[] getPrimeListUpTo(int n) {
         int counter = 0;
