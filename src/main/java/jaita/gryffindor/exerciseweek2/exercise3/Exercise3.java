@@ -21,10 +21,10 @@ public class Exercise3 {
     public static int getUserInput() {
         Scanner scanner = new Scanner(System.in);
         int input;
-        do{
-        System.out.print("Inserisci un numero maggiore di 0 per capire se è primo o no: ");
+        do {
+            System.out.print("Inserisci un numero maggiore di 0 per capire se è primo o no: ");
             input = scanner.nextInt();
-    } while(input <= 0);
+        } while(input <= 0);
         return input;
     }
 
