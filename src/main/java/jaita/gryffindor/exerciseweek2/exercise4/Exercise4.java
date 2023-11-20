@@ -22,22 +22,24 @@ public class Exercise4 {
 
     public static int[] getPrimeListUpTo(int n) {
         int counter = 0;
-        int[] primeNumbers;
+        int[] primeNumbersTemp = new int[n];
         for(int i = 1; i <= n; i++) {
             if(isPrime(i)) {
+                primeNumbersTemp[counter] = i;
                 counter++;
             }
         }
         System.out.println("Ho trovato "+counter+" numeri primi\nEcco i numeri primi da 0 a "+n);
 
-        primeNumbers = new int[counter];
-        int k = 0;
-        for(int j = 1; j <= n; j++) {
-            if(isPrime(j)) {
-                primeNumbers[k] = j;
-                k++;
-            }
-        }
+        int[] primeNumbers = new int[counter];
+//        int k = 0;
+//        for(int j = 1; j <= n; j++) {
+//            if(isPrime(j)) {
+//                primeNumbers[k] = j;
+//                k++;
+//            }
+//        }
+        System.arraycopy(primeNumbersTemp, 0, primeNumbers, 0, counter);
         return primeNumbers;
     }
 
